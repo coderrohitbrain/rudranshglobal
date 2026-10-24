@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudransh Global Technologies LLP (RGT) | Next-Gen IT & Cloud Solutions</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rgtDarkBg: '#050B14',
+                        rgtNavyDark: '#0B132B',
+                        rgtNavyCard: '#111D38',
+                        rgtNavyBorder: '#1E2D53',
+                        rgtCyan: '#00B4D8',
+                        rgtCyanLight: '#90E0EF',
+                        rgtBlue: '#0077B6',
+                        rgtDeepBlue: '#03045E'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Space Grotesk"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Glassmorphism Styles */
+        .glass-header {
+            background: rgba(11, 19, 43, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 180, 216, 0.15);
+        }
+        
+        .glass-card {
+            background: rgba(17, 29, 56, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 180, 216, 0.12);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 180, 216, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 180, 216, 0.25);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 20%, #90E0EF 60%, #00B4D8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-bg-button {
+            background: linear-gradient(135deg, #0077B6 0%, #00B4D8 100%);
+        }
+
+        .gradient-bg-button:hover {
+            background: linear-gradient(135deg, #00B4D8 0%, #90E0EF 100%);
+        }
+
+        /* Glowing background blobs */
+        .glow-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.25;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050B14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E2D53;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00B4D8;
+        }
+    </style>
+</head>
+<body class="bg-rgtDarkBg text-slate-200 font-sans selection:bg-rgtCyan selection:text-rgtDarkBg overflow-x-hidden">
+
+    <!-- Glowing Background Accents -->
+    <div class="glow-blob w-96 h-96 bg-rgtCyan top-10 left-[-100px]"></div>
+    <div class="glow-blob w-96 h-96 bg-rgtBlue top-[40%] right-[-100px]"></div>
+    <div class="glow-blob w-[500px] h-[500px] bg-rgtDeepBlue bottom-10 left-1/3"></div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-header transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Full Brand Name -->
+                <a href="#home" class="flex items-center gap-3.5 group">
+                    <div class="relative flex items-center justify-center p-1 bg-white/5 border border-rgtCyan/20 rounded-xl backdrop-blur-sm group-hover:border-rgtCyan/60 transition-all duration-300">
+                        <img src="1000701856_3.png" alt="Rudransh Global Technologies LLP Logo" class="h-11 w-auto max-w-[180px] object-contain transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; document.getElementById('header-fallback-logo').classList.remove('hidden');">
+                        <!-- Inline SVG Fallback representing the actual RGT Infinity Logo Design -->
+                        <div id="header-fallback-logo" class="hidden flex items-center justify-center">
+                            <svg class="h-10 w-auto" viewBox="0 0 300 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 50 60 C 50 35, 80 35, 100 60 C 120 85, 150 85, 150 60 C 150 35, 180 35, 200 60 C 220 85, 250 85, 250 60 C 250 35, 220 35, 200 60 C 180 85, 150 85, 150 60 C 150 35, 120 35, 100 60 C 80 85, 50 85, 50 60 Z" stroke="url(#logo-grad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+                                <text x="65" y="72" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="34">R</text>
+                                <text x="137" y="72" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="34">G</text>
+                                <text x="215" y="72" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="34">T</text>
+                                <defs>
+                                    <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#0B132B" />
+                                        <stop offset="50%" stop-color="#0077B6" />
+                                        <stop offset="100%" stop-color="#00B4D8" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="text-base sm:text-lg font-extrabold font-heading tracking-wider text-white group-hover:text-rgtCyan transition-colors leading-tight">
+                            RUDRANSH
+                        </span>
+                        <span class="text-[9px] sm:text-[10px] font-bold tracking-widest text-rgtCyan uppercase opacity-90 leading-tight">
+                            GLOBAL TECHNOLOGIES LLP
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#home" class="text-slate-300 hover:text-rgtCyan transition-colors">Home</a>
+                    <a href="#about" class="text-slate-300 hover:text-rgtCyan transition-colors">About Us</a>
+                    <a href="#services" class="text-slate-300 hover:text-rgtCyan transition-colors">Services</a>
+                    <a href="#why-us" class="text-slate-300 hover:text-rgtCyan transition-colors">Why Us</a>
+                    <a href="#contact" class="text-slate-300 hover:text-rgtCyan transition-colors">Contact</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contact" class="gradient-bg-button text-rgtDarkBg font-bold px-6 py-2.5 rounded-full text-sm shadow-lg shadow-rgtCyan/20 transition-all duration-300 hover:scale-105">
+                        Get a Quote <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-rgtNavyDark border-b border-rgtNavyBorder px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-rgtNavyCard hover:text-rgtCyan">Home</a>
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-rgtNavyCard hover:text-rgtCyan">About Us</a>
+            <a href="#services" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-rgtNavyCard hover:text-rgtCyan">Services</a>
+            <a href="#why-us" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-rgtNavyCard hover:text-rgtCyan">Why Us</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-rgtNavyCard hover:text-rgtCyan">Contact</a>
+            <a href="#contact" class="mobile-link block w-full text-center gradient-bg-button text-rgtDarkBg font-bold px-5 py-3 rounded-xl mt-4">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-rgtCyan/30 text-rgtCyan text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-rgtCyan animate-ping"></span>
+                        Architecting Digital Transformation
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight leading-tight">
+                        Powering Enterprise Success with <span class="gradient-text">Next-Gen Tech & Cloud Security</span>
+                    </h1>
+                    
+                    <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Rudransh Global Technologies LLP (RGT) delivers high-impact IT consulting, cloud engineering, advanced AI integration, scalable software development, and bulletproof cloud security architectures for global enterprises.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#services" class="w-full sm:w-auto text-center gradient-bg-button text-rgtDarkBg font-bold px-8 py-4 rounded-xl shadow-xl shadow-rgtCyan/20 transition-all duration-300 hover:scale-105">
+                            Explore Services <i class="fa-solid fa-chevron-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto text-center glass-card hover:bg-rgtNavyCard text-slate-200 border border-rgtNavyBorder hover:border-rgtCyan/40 font-semibold px-8 py-4 rounded-xl transition-all duration-300">
+                            Schedule Consultation
+                        </a>
+                    </div>
+
+                    <!-- Trust indicators -->
+                    <div class="pt-8 border-t border-rgtNavyBorder/60 flex flex-wrap justify-center lg:justify-start items-center gap-6 text-xs text-slate-400">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-rgtCyan text-base"></i> ISO-Grade Cloud Security</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-microchip text-rgtCyan text-base"></i> AI & ML Driven Intelligence</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-clock text-rgtCyan text-base"></i> 24/7 Managed Support</span>
+                    </div>
+                </div>
+
+                <!-- Right Visual Element / Interactive Card Hero graphic -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Card decorative backdrop -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-rgtCyan to-rgtBlue rounded-3xl blur opacity-30 animate-pulse"></div>
+                        
+                        <div class="relative glass-card p-6 sm:p-8 rounded-2xl border border-rgtNavyBorder bg-rgtNavyDark/90 shadow-2xl">
+                            <!-- Header branding in Hero Card -->
+                            <div class="flex items-center justify-between pb-6 border-b border-rgtNavyBorder">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                                <span class="text-xs font-mono text-rgtCyan bg-rgtNavyCard px-3 py-1 rounded-md border border-rgtNavyBorder">RGT Tech Shield v3.4</span>
+                            </div>
+
+                            <!-- Mock Tech Ecosystem Visual -->
+                            <div class="py-6 space-y-4">
+                                <div class="p-3.5 bg-rgtNavyBg/80 rounded-xl border border-rgtNavyBorder/80 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-lg bg-rgtCyan/10 border border-rgtCyan/30 flex items-center justify-center text-rgtCyan">
+                                            <i class="fa-solid fa-cloud-lock text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-sm font-semibold text-white">Cloud Security Shield</h4>
+                                            <p class="text-xs text-slate-400">Zero Trust Architecture & Threats Monitor</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-green-400 font-mono font-medium flex items-center gap-1">
+                                        <i class="fa-solid fa-circle text-[8px]"></i> Active
+                                    </span>
+                                </div>
+
+                                <div class="p-3.5 bg-rgtNavyBg/80 rounded-xl border border-rgtNavyBorder/80 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-lg bg-rgtBlue/20 border border-rgtBlue/40 flex items-center justify-center text-rgtCyanLight">
+                                            <i class="fa-solid fa-brain text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-sm font-semibold text-white">AI Engine Integration</h4>
+                                            <p class="text-xs text-slate-400">Predictive Analytics & Enterprise LLMs</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-rgtCyan font-mono font-medium">Running</span>
+                                </div>
+
+                                <div class="p-3.5 bg-rgtNavyBg/80 rounded-xl border border-rgtNavyBorder/80 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+                                            <i class="fa-solid fa-code text-lg"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-sm font-semibold text-white">Custom App Deployment</h4>
+                                            <p class="text-xs text-slate-400">Cross-platform Web & Mobile Apps</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-slate-400 font-mono">100% Uptime</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <div class="flex justify-between text-xs text-slate-400 mb-2">
+                                    <span>Global Network Status</span>
+                                    <span class="text-rgtCyan font-mono">Optimal (99.99%)</span>
+                                </div>
+                                <div class="w-full bg-rgtNavyCard h-2 rounded-full overflow-hidden">
+                                    <div class="bg-gradient-to-r from-rgtBlue to-rgtCyan h-full w-[98%] rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 relative z-10 bg-rgtNavyDark/40 border-y border-rgtNavyBorder/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-rgtCyan text-xs font-bold tracking-widest uppercase mb-2 block">Our Expertise</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+                    Comprehensive Technology Solutions
+                </h2>
+                <p class="text-slate-400 mt-4 text-base sm:text-lg">
+                    We combine strategic IT consulting with cutting-edge cloud engineering, AI intelligence, and cybersecurity to accelerate business growth.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: IT Consulting -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-xl bg-rgtCyan/10 border border-rgtCyan/30 text-rgtCyan flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-3 group-hover:text-rgtCyan transition-colors">
+                        IT Consulting & Strategy
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Strategic tech roadmaps, digital transformation governance, architecture reviews, and legacy modernization tailored to your business goals.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300 font-medium">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Digital Transformation Strategy</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Enterprise IT Architecture</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Technology Audit & Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Cloud Solutions -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-xl bg-rgtBlue/20 border border-rgtBlue/40 text-rgtCyanLight flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-3 group-hover:text-rgtCyan transition-colors">
+                        Cloud Solutions & DevOps
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Seamless cloud migration, multi-cloud strategy, serverless architectures, and automated DevOps CI/CD pipelines on AWS, Azure, and GCP.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300 font-medium">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> AWS / Azure / GCP Engineering</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Infrastructure as Code (IaC)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Kubernetes & Containerization</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Cloud Security (Highlighted Focus) -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-2 relative border-rgtCyan/40 bg-rgtNavyCard/80">
+                    <div class="absolute -top-3 right-6 bg-rgtCyan text-rgtDarkBg font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">
+                        Essential
+                    </div>
+                    <div class="w-14 h-14 rounded-xl bg-rgtCyan/20 border border-rgtCyan/50 text-rgtCyan flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-3 group-hover:text-rgtCyan transition-colors">
+                        Cloud Security & Governance
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Next-generation cloud defense with Zero-Trust frameworks, real-time threat monitoring, vulnerability management, and strict regulatory compliance.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300 font-medium">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Zero-Trust Network Architecture</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Automated Compliance (ISO/GDPR/SOC2)</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Threat Intelligence & SIEM</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: AI & ML Integration -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-3 group-hover:text-rgtCyan transition-colors">
+                        AI & Machine Learning
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Empower your enterprise with custom AI models, Generative AI solutions, natural language processing, predictive analytics, and process automation.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300 font-medium">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Enterprise Generative AI & LLMs</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Predictive Data Analytics</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Intelligent Process Automation</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5: Software Development -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-3 group-hover:text-rgtCyan transition-colors">
+                        Custom Software Development
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        End-to-end bespoke software engineered for scale, high security, and high performance utilizing modern microservices and clean code standards.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300 font-medium">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Enterprise ERP/CRM Systems</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Microservices & API Integration</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Legacy System Refactoring</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6: Custom Application Development -->
+                <div class="glass-card p-8 rounded-2xl transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-3 group-hover:text-rgtCyan transition-colors">
+                        Application Development
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Engaging, intuitive, and responsive Web & Mobile applications (iOS, Android, PWA) built with modern frameworks and slick user interfaces.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-300 font-medium">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> Native iOS & Android Apps</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> React / Angular / Flutter Solutions</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rgtCyan"></i> UI/UX Design & Prototyping</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Visual Branding -->
+                <div class="lg:col-span-5">
+                    <div class="relative glass-card p-8 rounded-3xl border border-rgtNavyBorder text-center">
+                        <div class="flex items-center justify-center mb-6">
+                            <img src="1000701856_3.png" alt="Rudransh Global Technologies Logo" class="h-28 w-auto object-contain max-w-full" onerror="this.style.display='none'; document.getElementById('about-fallback-logo').classList.remove('hidden');">
+                            <div id="about-fallback-logo" class="hidden">
+                                <svg class="h-24 w-auto mx-auto" viewBox="0 0 300 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M 50 60 C 50 35, 80 35, 100 60 C 120 85, 150 85, 150 60 C 150 35, 180 35, 200 60 C 220 85, 250 85, 250 60 C 250 35, 220 35, 200 60 C 180 85, 150 85, 150 60 C 150 35, 120 35, 100 60 C 80 85, 50 85, 50 60 Z" stroke="url(#about-logo-grad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <text x="65" y="72" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="34">R</text>
+                                    <text x="137" y="72" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="34">G</text>
+                                    <text x="215" y="72" fill="#FFFFFF" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="34">T</text>
+                                    <defs>
+                                        <linearGradient id="about-logo-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#0B132B" />
+                                            <stop offset="50%" stop-color="#0077B6" />
+                                            <stop offset="100%" stop-color="#00B4D8" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold font-heading text-white">RUDRANSH GLOBAL TECHNOLOGIES LLP</h3>
+                        <p class="text-rgtCyan text-xs tracking-widest uppercase mt-1.5 font-semibold">IT Consulting • Cloud Engineering • Security • AI</p>
+                        
+                        <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+                            A global technology partnership committed to bridging the gap between enterprise IT paradigms and future-proof digital innovations.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-rgtNavyBorder">
+                            <div class="text-left">
+                                <p class="text-2xl font-extrabold font-heading text-rgtCyan">100%</p>
+                                <p class="text-xs text-slate-400">Client Transparency</p>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-2xl font-extrabold font-heading text-rgtCyan">Global</p>
+                                <p class="text-xs text-slate-400">Standard Delivery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-rgtCyan text-xs font-bold tracking-widest uppercase block">About RGT LLP</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+                        Transforming Enterprises Through Strategic Technology Engineering
+                    </h2>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        At <strong class="text-white">Rudransh Global Technologies LLP</strong>, we believe that sustainable growth requires a blend of robust infrastructure, intelligent automation, and ironclad security. 
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Our multidisciplinary team of cloud architects, software engineers, security researchers, and AI specialists collaborate closely with enterprises to craft tailored digital solutions that solve real business bottlenecks.
+                    </p>
+
+                    <!-- Core Values Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-xl bg-rgtNavyCard/50 border border-rgtNavyBorder">
+                            <div class="text-rgtCyan text-lg font-bold mb-1 flex items-center gap-2">
+                                <i class="fa-solid fa-bullseye"></i> Our Mission
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                To empower businesses worldwide with resilient cloud systems, actionable AI insights, and custom software that drives competitive advantage.
+                            </p>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-rgtNavyCard/50 border border-rgtNavyBorder">
+                            <div class="text-rgtCyan text-lg font-bold mb-1 flex items-center gap-2">
+                                <i class="fa-solid fa-eye"></i> Our Vision
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                To be the premier global IT consulting and cloud security partner trusted by businesses for reliability, innovation, and integrity.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us & Statistics Counter Section -->
+    <section id="why-us" class="py-20 relative z-10 bg-rgtNavyDark/60 border-y border-rgtNavyBorder">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-rgtCyan text-xs font-bold tracking-widest uppercase mb-2 block">Why Choose RGT</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+                    Engineered for Unmatched Performance & Trust
+                </h2>
+                <p class="text-slate-400 mt-4 text-base">
+                    We deliver enterprise-grade execution with the agility of modern technology leaders.
+                </p>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="glass-card p-6 rounded-2xl text-center border-rgtNavyBorder">
+                    <p class="text-3xl sm:text-4xl font-extrabold font-heading text-rgtCyan mb-1 counter" data-target="99.9">99.9%</p>
+                    <p class="text-xs sm:text-sm text-slate-300 font-medium">Cloud Service Uptime</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center border-rgtNavyBorder">
+                    <p class="text-3xl sm:text-4xl font-extrabold font-heading text-rgtCyan mb-1 counter" data-target="100">100+</p>
+                    <p class="text-xs sm:text-sm text-slate-300 font-medium">Enterprise Engagements</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center border-rgtNavyBorder">
+                    <p class="text-3xl sm:text-4xl font-extrabold font-heading text-rgtCyan mb-1">24 / 7</p>
+                    <p class="text-xs sm:text-sm text-slate-300 font-medium">Security & SOC Support</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center border-rgtNavyBorder">
+                    <p class="text-3xl sm:text-4xl font-extrabold font-heading text-rgtCyan mb-1">100%</p>
+                    <p class="text-xs sm:text-sm text-slate-300 font-medium">Zero Trust Security</p>
+                </div>
+            </div>
+
+            <!-- Feature Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl bg-rgtNavyCard/40 border border-rgtNavyBorder">
+                    <i class="fa-solid fa-layer-group text-3xl text-rgtCyan mb-4"></i>
+                    <h4 class="text-lg font-bold text-white mb-2">End-to-End Execution</h4>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        From initial IT strategy and architectural blueprinting to development, cloud security deployment, and continuous monitoring.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-rgtNavyCard/40 border border-rgtNavyBorder">
+                    <i class="fa-solid fa-lock text-3xl text-rgtCyan mb-4"></i>
+                    <h4 class="text-lg font-bold text-white mb-2">Security-First Methodology</h4>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Security isn't an afterthought. We embed military-grade encryption and compliance frameworks directly into the code and architecture.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-rgtNavyCard/40 border border-rgtNavyBorder">
+                    <i class="fa-solid fa-bolt text-3xl text-rgtCyan mb-4"></i>
+                    <h4 class="text-lg font-bold text-white mb-2">Agile & Scalable Delivery</h4>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Modular solutions that grow with your business. Accelerated development cycles without compromising quality or performance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Contact Form Section -->
+    <section id="contact" class="py-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Information Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-rgtCyan text-xs font-bold tracking-widest uppercase block">Get In Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+                        Let's Build the Future of Your Technology Together
+                    </h2>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Have a project in mind, need a cloud security audit, or looking for expert IT consulting? Connect with our global engineering team today.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-start gap-4 p-4 rounded-xl glass-card">
+                            <div class="w-10 h-10 rounded-lg bg-rgtCyan/10 border border-rgtCyan/30 text-rgtCyan flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Email Us</p>
+                                <p class="text-sm font-semibold text-white">info@rudranshglobaltech.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl glass-card">
+                            <div class="w-10 h-10 rounded-lg bg-rgtCyan/10 border border-rgtCyan/30 text-rgtCyan flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Global Headquarter</p>
+                                <p class="text-sm font-semibold text-white">Rudransh Global Technologies LLP</p>
+                                <p class="text-xs text-slate-400">IT Park, Technology Corridor, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl glass-card">
+                            <div class="w-10 h-10 rounded-lg bg-rgtCyan/10 border border-rgtCyan/30 text-rgtCyan flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-headset text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Consultation Hours</p>
+                                <p class="text-sm font-semibold text-white">Monday - Friday (24/7 Cloud Support)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card p-8 rounded-3xl border border-rgtNavyBorder bg-rgtNavyDark/90">
+                        <h3 class="text-xl font-bold font-heading text-white mb-2">Request a Quote / Consultation</h3>
+                        <p class="text-xs text-slate-400 mb-6">Fill out the form below and an RGT tech consultant will get back to you within 24 hours.</p>
+
+                        <!-- Notification Box -->
+                        <div id="form-message" class="hidden mb-6 p-4 rounded-xl text-xs font-medium border"></div>
+
+                        <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="fullName" class="block text-xs font-semibold text-slate-300 mb-1.5">Full Name *</label>
+                                    <input type="text" id="fullName" required placeholder="John Doe" class="w-full bg-rgtNavyCard border border-rgtNavyBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-rgtCyan transition-colors">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-xs font-semibold text-slate-300 mb-1.5">Work Email *</label>
+                                    <input type="email" id="email" required placeholder="john@company.com" class="w-full bg-rgtNavyCard border border-rgtNavyBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-rgtCyan transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="company" class="block text-xs font-semibold text-slate-300 mb-1.5">Company Name</label>
+                                    <input type="text" id="company" placeholder="Acme Corporation" class="w-full bg-rgtNavyCard border border-rgtNavyBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-rgtCyan transition-colors">
+                                </div>
+                                <div>
+                                    <label for="service" class="block text-xs font-semibold text-slate-300 mb-1.5">Primary Interest *</label>
+                                    <select id="service" required class="w-full bg-rgtNavyCard border border-rgtNavyBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-rgtCyan transition-colors">
+                                        <option value="" disabled selected>Select Service...</option>
+                                        <option value="IT Consulting">IT Consulting & Strategy</option>
+                                        <option value="Cloud Solutions">Cloud Infrastructure & DevOps</option>
+                                        <option value="Cloud Security">Cloud Security & Governance</option>
+                                        <option value="AI Integration">AI & Machine Learning</option>
+                                        <option value="Software Development">Software Engineering</option>
+                                        <option value="App Development">Mobile & Web App Development</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-xs font-semibold text-slate-300 mb-1.5">Project Scope / Requirements *</label>
+                                <textarea id="message" rows="4" required placeholder="Briefly describe your business needs or technical requirements..." class="w-full bg-rgtNavyCard border border-rgtNavyBorder rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-rgtCyan transition-colors resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full gradient-bg-button text-rgtDarkBg font-bold py-4 rounded-xl shadow-lg shadow-rgtCyan/20 transition-all duration-300 hover:scale-[1.01] flex items-center justify-center gap-2">
+                                <span>Submit Request</span>
+                                <i class="fa-solid fa-paper-plane text-xs"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-rgtNavyDark border-t border-rgtNavyBorder pt-16 pb-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-rgtNavyBorder">
+                
+                <!-- Col 1 & 2: Branding -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#home" class="flex items-center gap-3 group">
+                        <img src="1000701856_3.png" alt="Rudransh Global Technologies Logo" class="h-12 w-auto object-contain" onerror="this.style.display='none'; document.getElementById('footer-fallback-logo').classList.remove('hidden');">
+                        <div id="footer-fallback-logo" class="hidden">
+                            <svg class="h-10 w-auto" viewBox="0 0 300 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 50 60 C 50 35, 80 35, 100 60 C 120 85, 150 85, 150 60 C 150 35, 180 35, 200 60 C 220 85, 250 85, 250 60 C 250 35, 220 35, 200 60 C 180 85, 150 85, 150 60 C 150 35, 120 35, 100 60 C 80 85, 50 85, 50 60 Z" stroke="#00B4D8" stroke-width="20"/>
+                            </svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-base font-extrabold font-heading text-white tracking-wider">RUDRANSH</span>
+                            <span class="text-[9px] font-bold text-rgtCyan tracking-widest uppercase">GLOBAL TECHNOLOGIES LLP</span>
+                        </div>
+                    </a>
+                    <p class="text-slate-400 text-xs sm:text-sm max-w-sm leading-relaxed">
+                        Rudransh Global Technologies LLP (RGT) is a premier technology services firm delivering IT consulting, cloud engineering, AI integrations, application development, and enterprise cloud security architectures.
+                    </p>
+                    <div class="flex items-center space-x-3 pt-2">
+                        <a href="#" class="w-9 h-9 rounded-lg bg-rgtNavyCard border border-rgtNavyBorder flex items-center justify-center text-slate-400 hover:text-rgtCyan hover:border-rgtCyan transition-colors"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-rgtNavyCard border border-rgtNavyBorder flex items-center justify-center text-slate-400 hover:text-rgtCyan hover:border-rgtCyan transition-colors"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-lg bg-rgtNavyCard border border-rgtNavyBorder flex items-center justify-center text-slate-400 hover:text-rgtCyan hover:border-rgtCyan transition-colors"><i class="fa-brands fa-github text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 3: Services -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Core Services</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="#services" class="hover:text-rgtCyan transition-colors">IT Consulting</a></li>
+                        <li><a href="#services" class="hover:text-rgtCyan transition-colors">Cloud Solutions</a></li>
+                        <li><a href="#services" class="hover:text-rgtCyan transition-colors">Cloud Security</a></li>
+                        <li><a href="#services" class="hover:text-rgtCyan transition-colors">AI & Machine Learning</a></li>
+                        <li><a href="#services" class="hover:text-rgtCyan transition-colors">Software Engineering</a></li>
+                        <li><a href="#services" class="hover:text-rgtCyan transition-colors">Application Dev</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Company</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li><a href="#about" class="hover:text-rgtCyan transition-colors">About RGT LLP</a></li>
+                        <li><a href="#why-us" class="hover:text-rgtCyan transition-colors">Why Choose Us</a></li>
+                        <li><a href="#contact" class="hover:text-rgtCyan transition-colors">Request Quote</a></li>
+                        <li><a href="#contact" class="hover:text-rgtCyan transition-colors">Careers</a></li>
+                        <li><a href="#contact" class="hover:text-rgtCyan transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 5: Security / Badges -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4">Security Standards</h4>
+                    <p class="text-xs text-slate-400 mb-3">Enterprise-grade compliance & infrastructure protection.</p>
+                    <div class="space-y-2 text-xs font-mono text-rgtCyan">
+                        <div class="px-3 py-1.5 rounded-lg bg-rgtNavyCard border border-rgtNavyBorder flex items-center gap-2">
+                            <i class="fa-solid fa-shield text-xs"></i> ISO 27001 Certified
+                        </div>
+                        <div class="px-3 py-1.5 rounded-lg bg-rgtNavyCard border border-rgtNavyBorder flex items-center gap-2">
+                            <i class="fa-solid fa-lock text-xs"></i> Zero-Trust Framework
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright and Legal -->
+            <div class="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>&copy; <span id="year"></span> Rudransh Global Technologies LLP (RGT). All Rights Reserved.</p>
+                <div class="flex items-center space-x-6">
+                    <a href="#" class="hover:text-slate-400 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400 transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-slate-400 transition-colors">Security Disclosure</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactivity -->
+    <script>
+        // Dynamic Copyright Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Close Mobile Menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 30) {
+                navbar.classList.add('shadow-xl', 'bg-rgtNavyDark/95');
+            } else {
+                navbar.classList.remove('shadow-xl', 'bg-rgtNavyDark/95');
+            }
+        });
+
+        // Interactive Contact Form Handling
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const messageBox = document.getElementById('form-message');
+            const name = document.getElementById('fullName').value;
+            const service = document.getElementById('service').value;
+
+            // Show interactive success state
+            messageBox.className = "mb-6 p-4 rounded-xl text-xs font-medium border bg-green-500/10 border-green-500/30 text-green-400 flex items-center gap-2";
+            messageBox.innerHTML = `<i class="fa-solid fa-circle-check text-base"></i> Thank you ${name}! Your inquiry for <strong>${service}</strong> has been received. Our team at Rudransh Global Technologies LLP will reach out shortly.`;
+            
+            // Reset Form Fields
+            document.getElementById('contact-form').reset();
+
+            // Smooth scroll up to message box if required
+            messageBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
